@@ -1,0 +1,28 @@
+<div class="navbar">
+  <app-navbar></app-navbar>
+</div>
+
+<div class="container">
+  <span class="heading">
+    <h1>{{lessonName}}</h1>
+  </span>
+  <div *ngFor="let contentItem of lessonContent" class="content">
+    <div *ngIf="contentItem.type == 'text' && contentItem.cursive == 'false' && contentItem.subheader == 'false'" class="text-content">
+      <p>{{contentItem.text}}</p>
+    </div>
+
+    <div *ngIf="contentItem.type == 'text' && contentItem.cursive == 'true'" class="text-content">
+      <i><p>{{contentItem.text}}</p></i>
+    </div>
+
+    <div *ngIf="contentItem.type == 'text' && contentItem.subheader == 'true'" class="text-content">
+      <b><p>{{contentItem.text}}</p></b>
+    </div>
+
+    <div *ngIf="contentItem.type == 'image'" class="image-content">
+      <img src="{{contentItem.imageUrl}}" alt="">
+    </div>
+  </div>
+
+  <app-comment-section></app-comment-section>
+</div>

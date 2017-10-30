@@ -1,0 +1,11 @@
+<div class="container">
+  <span>Comments:</span>
+  <div *ngFor="let comment of comments | async">
+    <div *ngIf="comment.lessonId == currentLessonId">
+      <app-comment-item [comment]=comment></app-comment-item>
+    </div>
+  </div>
+  <div align="center">
+    <app-comment-form></app-comment-form>
+  </div>
+</div>

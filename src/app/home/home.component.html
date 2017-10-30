@@ -1,0 +1,53 @@
+<section id="video-landing">
+  <app-navbar></app-navbar>
+  <div class="center">
+    <h1>Welcome To Guitargram</h1>
+    <p>Take your guitar skills to a whole new level</p>
+  </div>
+  <video autoplay="autoplay" loop="loop" muted="muted" id="bgvid">
+    <source src="/../../assets/video/videoplayback.mp4" type="video/mp4" /> 
+  </video>
+</section>
+
+<section id="section-wwa">
+  <span class="wwa">Who we are?</span>
+</section>
+
+<section id="section-about">
+  <div class="logo">
+    <span>G</span>
+  </div>
+  <div class="image">
+    <img src="/../../assets/img/red_guitar.jpg" height="100%" alt="">
+  </div>
+  <div class="about">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam molestias cumque vitae, excepturi officiis in fuga mollitia sed illo vel consequuntur iste reprehenderit possimus esse!
+  </div>
+</section>
+
+<section class="kickass">
+  <span>Are you ready for some kickass lessons?</span>
+</section>
+
+<div class="choose">
+  <div class="boxclassroom">
+    <h2>Classroom</h2>
+    <img src="/../../assets/img/guitar_pick.png" alt="">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <a routerLink="classroom" class="button">Go to Classroom</a>
+  </div>
+  <div *ngIf="!(user|async)?.uid" class="boxlogin">
+    <h2>Log In</h2>
+    <img src="/../../assets/img/login.png" width="250px" alt="">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <a routerLink="login" class="button">Log In</a>
+  </div>
+  <div *ngIf="!(user|async)?.uid" class="boxsignup">
+    <h2>Sign Up</h2>
+    <img src="/../../assets/img/signup.png" width="69%" alt="">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <a routerLink="signup" class="button">Sign Up</a>
+  </div>
+</div>
+
+

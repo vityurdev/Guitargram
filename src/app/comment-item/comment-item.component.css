@@ -1,0 +1,15 @@
+.container {
+    border: 1px solid #111;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0px;
+    font-size: 18px;
+}
+
+.comContent {
+    padding-top: 10px;
+}
+
+i {
+    color: #555;
+}

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+* {
+    margin: 0;
+}
+
+.navbar {
+   padding-bottom: 60px;
+}
+
+.filterContainer {
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.container {
+    padding: 10px 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.lessonItem {
+    padding: 10px;
+    display: cell;
+    text-decoration: none;
+    border-style: solid;
+    border-color: #111;
+    border-radius: 35px;
+    margin: 10px;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+}
+
+figure {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    font-family: "Lato";
+    color: #000;
+}
+
+.loginProposal  {
+    text-align: center;
+    font-weight: bold;
+    font-size: 3em;
+    font-family: "Lato";
+    padding: 50px 0px;
+}
+
+.premiumProposal {
+    text-align: center;
+    font-weight: bold;
+    font-size: 3em;
+    font-family: "Lato";
+    padding: 50px 0px;
+}
+
+.refs {
+    text-decoration: underline;
+}
+
+.refs:hover {
+    color: #f12;
+}

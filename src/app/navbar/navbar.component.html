@@ -1,0 +1,10 @@
+<div class="topnav" id="myTopnav">
+    <a class="logo" routerLink="/">Guitargram</a>
+    <a routerLink="/classroom">Classroom</a>
+    <a *ngIf="!(user|async)?.uid" routerLink="/login">Login</a>
+    <a *ngIf="!(user|async)?.uid" routerLink="/signup">Sign Up</a>
+    <a *ngIf="(user|async)?.uid">Hello, {{userName}}<span style="font-size: 85%" *ngIf="isUserPremium">&#9733;</span></a>
+    <a *ngIf="(user|async)?.uid && !isUserPremium" routerLink="/premium">Go Premium</a>
+    <a *ngIf="(user|async)?.uid" (click)="logout()">Logout</a>
+    <a href="javascript:void(0);" class="icon" (click)="toggleMenu()">&#9776;</a>
+</div>

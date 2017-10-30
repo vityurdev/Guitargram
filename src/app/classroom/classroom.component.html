@@ -1,0 +1,47 @@
+<div class="navbar">
+  <app-navbar></app-navbar>
+</div>
+
+<div class="filterContainer">
+  <button (click)="showLessonsWithLevel('all')">All</button>
+  <button (click)="showLessonsWithLevel('basic')">Basic</button>
+  <button (click)="showLessonsWithLevel('medium')">Medium</button>
+  <button (click)="showLessonsWithLevel('pro')">Pro</button>
+</div>
+
+<div class="container">
+  <div *ngFor="let lesson of lessons | async">
+    <div *ngIf="(lesson.registrationRequired == 'false' 
+              ||
+              lesson.registrationRequired == 'true' && (user|async)?.uid && lesson.premiumRequired == 'false'
+              ||
+              lesson.premiumRequired == 'true' && (user|async)?.uid && isUserPremium)
+              
+              &&
+
+              (lesson.level == lessonLevel || lessonLevel == 'all')"> 
+      <a [routerLink]="['/lesson', lesson.$key]">
+        <div class="lessonItem">
+          <figure>
+            <img src="{{lesson.thumbnailUrl}}" alt="">
+            <figcaption>{{lesson.name}}</figcaption>
+          </figure>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+<div *ngIf="!(user|async)?.uid" class="loginProposal">
+  <p>
+    Wanna see 6 extra lessons? 
+    <a [routerLink]="['/login']" class="refs">Log in</a>
+    or
+    <a [routerLink]="['/signup']" class="refs">sign up!</a>
+  </p>
+</div>
+
+<div *ngIf="(user|async)?.uid && !isUserPremium" class="premiumProposal">
+  Wanna see 3 extra lessons? 
+  <a [routerLink]="['/premium']" class="refs">Go premium!</a>
+</div>
+  

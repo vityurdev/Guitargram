@@ -1,0 +1,27 @@
+<div class="navbar">
+  <app-navbar></app-navbar>
+</div>
+
+<div class="container" align="center">
+  <p>
+    Wanna upgrade account? Type your premium code in the field below.
+  </p>
+
+  <form>
+    <input type="text" name="premiumcode" [(ngModel)]="premiumCode">
+    <br>
+    <input type="submit" value="Submit" (click)="upgradeUser()">
+  </form>
+
+  <!-- <button (click)="showUserStatus()">User Status</button> -->
+
+  <div *ngIf="errorMessageVisible">
+    Invalid premium code!
+  </div>
+
+  <div *ngIf="userUpgraded">
+    That's right! You will be redirected to classroom in just a moment...
+  </div>
+</div>
+
+

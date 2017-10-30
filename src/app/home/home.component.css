@@ -1,0 +1,144 @@
+* {
+    align-content: center;
+}
+
+#video-landing {
+    min-height: 100vh;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    color: #FFF;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+#video-landing video {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -100;
+    overflow: hidden;
+}
+
+#video-landing .center {
+    text-align: center;
+}
+
+#video-landing h1 {
+    font-size: 4em;
+    text-transform: uppercase;
+    margin-top: 10%;
+    color: #F13;
+    font-family: "Lato";
+    
+    letter-spacing: 10px;
+}
+
+#video-landing p {
+    font-family: "Lato";
+    font-size: 2em;
+    color: #ff1133;
+}
+
+#section-wwa {
+    color: #F12;
+    background-color: #FFF;
+    font-family: "Lato";
+    text-align: center;
+    padding: 24px;
+    
+}
+
+#section-wwa .wwa {
+    font-size: 400%;
+}
+
+#section-about {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+}
+
+#section-about div {
+    padding: 16px 100px;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    font-family: "Lato";
+}
+
+#section-about .about {
+    padding-top: 45px;
+    font-size: 1.5em;
+    color: #111;
+}
+
+#section-about div span {
+    font-size: 15em;
+    
+    color: #f12;
+    font-weight: bold;
+}
+
+.kickass {
+    text-align: center;
+    font-family: "Lato";
+    color: #f12;
+    font-size: 2.5em;
+    background-color: #111;
+    padding: 32px;
+    padding-bottom: 0px;
+}
+
+.choose {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    
+}
+
+.choose {
+    background-color: #111;
+    color: #fff;
+    font-family: "Lato";
+}
+
+.choose div {
+    padding-bottom: 50px;
+}
+
+.choose div p {
+    padding: 20px 10px;
+    padding-bottom: 50px;
+}
+
+.choose .button {
+    background: #f12;
+    text-decoration: none;
+    color: #fff;
+    padding: 20px;
+}
+
+.choose .button a {
+    padding: 40px;
+}
+
+.ayrcontainer {
+    display: flex;
+    justify-content: center;
+}
+
+.ayrcontainer div {
+    border: 1px #cccccc solid;
+    padding: 10px;
+    margin: 10px;
+}

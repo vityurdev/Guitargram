@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    
+}
+
+.navbar {
+   padding-bottom: 60px;
+}
+
+.container {
+    margin-top: 50px;
+    font-family: "Lato";
+
+}
+
+.container p {
+    font-size: 2.5em;
+    padding: 50px 0px;
+}
+
+.container form input {
+    font-family: "Lato";
+    padding: 10px;
+    margin-bottom: 20px;
+}
